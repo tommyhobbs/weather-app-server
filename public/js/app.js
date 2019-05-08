@@ -7,7 +7,7 @@ const getForecast = input => {
   messageOne.textContent = 'Loading...';
   messageTwo.textContent = '';
 
-  fetch(`http://localhost:3000/weather?address=${input}`).then(response => {
+  fetch(`/weather?address=${input}`).then(response => {
     response.json().then(({ error, location, forecastData }) => {
       if (error) {
         messageOne.textContent = error;
