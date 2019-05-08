@@ -15,7 +15,11 @@ const forecast = (lat, lon, callback) => {
         undefined,
         `${today.summary} It is currently ${
           currently.temperature
-        } degrees. There is a ${currently.precipProbability}% chance or rain.`
+        } degrees. The high for today is ${
+          today.temperatureHigh
+        } degrees and a low of ${today.temperatureLow} degrees. There is a ${
+          currently.precipProbability
+        }% chance or rain.`
       );
     }
   });
